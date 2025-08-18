@@ -11,3 +11,10 @@ window.ROTATION = {
     // etc — add more as you create lessons
   }
 };
+
+// Somewhere in your teamsLinks (or equivalent) map:
+const teamsLinks = {
+  "u1-lesson1.1-submit": "#", // TODO: replace with actual Teams assignment URL when ready
+  // ...other lesson keys later
+};
+
