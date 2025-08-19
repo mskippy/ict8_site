@@ -14,7 +14,9 @@ window.ROTATION = {
 
 // Somewhere in your teamsLinks (or equivalent) map:
 const teamsLinks = {
-  "u1-lesson1.1-submit": "#", // TODO: replace with actual Teams assignment URL when ready
-  // ...other lesson keys later
+  "u1-lesson1.1-submit": "#",
+  "u1-crane-submit": "#",
+  "u1-typing-login": "#", // swap in your typing site URL when ready
 };
+
 
