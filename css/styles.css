@@ -16,7 +16,7 @@ html,body{height:100%}
 
 body{
   margin:0;
-  font-family: Tahoma;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color:var(--accent)(--text);
   background:var(--bg);
   line-height:1.55;
