@@ -3,45 +3,99 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title><!-- Lesson Title --></title>
-  <link rel="stylesheet" href="../assets/css/style.css" />
+  <title>Lesson X.X – TITLE</title>
+  <!-- paths assume this file lives inside: units/<unit_name>/ -->
+  <link rel="stylesheet" href="../../assets/css/style.css?v=3" />
 </head>
 <body>
-  <header class="site-header">
-    <h1>ICT 8</h1>
-    <nav>
-      <a href="../../index.html">Home</a>
-      <a href="../index.html">Unit Home</a>
-    </nav>
-  </header>
+  <!-- Fixed left sidebar -->
+  <aside class="sidebar">
+    <h2>ICT 8</h2>
 
-  <main class="wrap">
-    <h2><!-- Lesson Title --></h2>
-    <p class="small">Unit <!--#-->, Lesson <!--#--></p>
+    <h3>Units</h3>
+    <ul class="side-nav">
+      <!-- Update the first link to this lesson's unit -->
+      <li><a href="index.html">Unit N: UNIT NAME</a></li>
+      <li><a href="../u2_digital_media/index.html">Unit 2: Digital Media</a></li>
+      <li><a href="../u3_game_development/index.html">Unit 3: Game Development</a></li>
+      <li><a href="../u4_web_development/index.html">Unit 4: Web Development</a></li>
+    </ul>
 
-    <section class="card">
-      <h3>Learning Goals</h3>
-      <ul>
-        <li><!-- goal --></li>
-        <li><!-- goal --></li>
-      </ul>
-    </section>
+    <h3>Unit N – Lessons</h3>
+    <ul class="side-nav">
+      <!-- Keep this page marked, add more lessons as you build them -->
+      <li><a href="lessonX.X.html" aria-current="page">Lesson X.X – TITLE</a></li>
+      <!-- <li><a href="lessonN.N.html">Lesson N.N – NEXT TITLE</a></li> -->
+    </ul>
 
-    <section class="card">
-      <h3>What You’ll Need</h3>
-      <ul>
-        <li><!-- materials / downloads --></li>
-      </ul>
-    </section>
+    <h3>Home</h3>
+    <ul class="side-nav">
+      <li><a href="../../index.html">Course Home</a></li>
+    </ul>
+  </aside>
 
-    <section class="card">
-      <h3>Steps</h3>
-      <ol>
-        <li><!-- step --></li>
-      </ol>
-    </section>
-  </main>
+  <!-- Main column -->
+  <div class="content">
+    <header class="site-header"><h1>Lesson X.X – TITLE</h1></header>
 
-  <script src="../assets/js/main.js"></script>
+    <main class="wrap">
+      <section class="card">
+        <h3>Overview</h3>
+        <p>One-sentence summary of what students will do in this lesson.</p>
+        <p class="small"><strong>Estimated time:</strong> 30–45 min</p>
+      </section>
+
+      <section class="card">
+        <h3>Learning Goals</h3>
+        <ul>
+          <li>Goal 1…</li>
+          <li>Goal 2…</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>What You’ll Need</h3>
+        <ul>
+          <li>Links, accounts, or materials.</li>
+          <li>Download(s): 
+            <!-- Example: update path/file -->
+            <a href="../../downloads/unit1/starter_files.zip" download>starter_files.zip</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>Steps</h3>
+        <ol>
+          <li>Step 1…</li>
+          <li>Step 2…</li>
+          <li>Step 3…</li>
+        </ol>
+      </section>
+
+      <section class="card">
+        <h3>Checks for Understanding</h3>
+        <ul>
+          <li>Students can… (success criteria)</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h3>Extensions / Early Finishers</h3>
+        <ul>
+          <li>Optional challenge or enrichment activity.</li>
+        </ul>
+      </section>
+
+      <footer class="lesson-footer">
+        <!-- Update prev/next when you add lessons -->
+        <a class="prev" href="index.html">← Back to Unit</a>
+        <span></span>
+        <!-- <a class="next" href="lessonN.N.html">Next lesson →</a> -->
+      </footer>
+    </main>
+  </div>
+
+  <script src="../../assets/js/main.js?v=3"></script>
 </body>
 </html>
