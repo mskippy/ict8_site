@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ICT 8 — 1.X — Lesson Title</title>
+  <title>ICT 8 — 1.1 — Welcome to ICT 8</title>
+  <!-- path from /units/u1_essential_skills/ to /assets/css/style.css -->
   <link rel="stylesheet" href="../../assets/css/style.css" />
 </head>
 <body>
   <div class="unit-shell">
+    <!-- Sidebar -->
     <aside id="sidebar" aria-label="Unit navigation">
       <h2 class="unit-title">Unit 1: Essential Skills</h2>
       <nav>
         <ul class="navlist">
           <li><a href="../../index.html">🏠 Course Home</a></li>
           <li><a href="./index.html">Unit Overview</a></li>
-          <li><a href="./Lesson 1.1.html">1.1</a></li>
+          <li><a class="active" href="./Lesson 1.1.html">1.1</a></li>
           <li><a href="./Lesson 1.2.html">1.2</a></li>
           <li><a href="./Lesson 1.3.html">1.3</a></li>
           <li><a href="./Lesson 1.4.html">1.4</a></li>
@@ -24,48 +26,53 @@
       </nav>
     </aside>
 
+    <!-- Main -->
     <main id="content">
-      <h1>1.X — Lesson Title</h1>
+      <h1>1.1 — Welcome to ICT 8</h1>
 
-      <p class="lede">One-line purpose/what students will accomplish today.</p>
+      <p class="lede">Quick intro to the course, expectations, and how we’ll work.</p>
 
       <section class="card">
         <h3>Today’s Goals</h3>
         <ul>
-          <li>Goal A</li>
-          <li>Goal B</li>
+          <li>Log in & get set up</li>
+          <li>Tour the course site & file structure</li>
+          <li>Understand how we’ll save and submit work</li>
         </ul>
       </section>
 
       <section class="card">
         <h3>You’ll Need</h3>
         <ul>
-          <li>Resource / file / link</li>
+          <li>OneDrive access</li>
+          <li>Course website open</li>
+          <li>Your school login</li>
         </ul>
       </section>
 
       <section class="card">
         <h3>Steps</h3>
         <ol>
-          <li>Step 1</li>
-          <li>Step 2</li>
+          <li>Open OneDrive and create your ICT8 folder.</li>
+          <li>Bookmark the course site.</li>
+          <li>Check you can download and open a sample file.</li>
         </ol>
       </section>
 
       <section class="card">
         <h3>Exit Ticket</h3>
-        <p>How students show they’ve met today’s goals.</p>
+        <p>Show your folder setup (screenshot or quick check-in).</p>
       </section>
 
-      <!-- Bottom nav (edit these two links each lesson) -->
+      <!-- Bottom nav (right-aligned group) -->
       <div class="lesson-nav">
-        <a class="prev" href="./Lesson 1.(X-1).html"><span class="arrow">←</span><span>1.(X-1)</span></a>
-        <a class="next" href="./Lesson 1.(X+1).html"><span>1.(X+1)</span><span class="arrow">→</span></a>
-        <!-- For the last lesson, remove the "next" link -->
+        <a class="prev" href="./index.html"><span class="arrow">←</span><span>Unit 1 Overview</span></a>
+        <a class="next" href="./Lesson 1.2.html"><span>1.2</span><span class="arrow">→</span></a>
       </div>
     </main>
   </div>
 
+  <!-- Auto-highlight active link (handles spaces in filenames) -->
   <script>
     (function () {
       const here = decodeURI(location.pathname.split('/').pop() || 'index.html').toLowerCase();
