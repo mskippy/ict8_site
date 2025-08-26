@@ -36,14 +36,5 @@
     </main>
   </div>
 
-  <script>
-    (function () {
-      const here = decodeURI(location.pathname.split('/').pop() || 'index.html').toLowerCase();
-      document.querySelectorAll('#sidebar .navlist a').forEach(a => {
-        const target = decodeURI(a.getAttribute('href').split('/').pop()).toLowerCase();
-        if (target === here) a.classList.add('active');
-      });
-    })();
-  </script>
-</body>
+  <script src="assets/js/main.js"></script>
 </html>

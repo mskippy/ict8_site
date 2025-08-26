@@ -71,15 +71,6 @@
     </main>
   </div>
 
-  <!-- Optional: auto-highlight the active link in the sidebar -->
-  <script>
-    (function () {
-      const here = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
-      document.querySelectorAll('#sidebar .navlist a').forEach(a => {
-        const target = a.getAttribute('href').split('/').pop().toLowerCase();
-        if (target === here) a.classList.add('active');
-      });
-    })();
-  </script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
