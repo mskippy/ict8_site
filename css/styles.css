@@ -1,0 +1,14 @@
+:root{
+    --bg:#ffffff;
+    --text:#111111;
+    --accent:#2b7fff;
+  }
+  html, body{
+    margin:0; padding:0; background:var(--bg); color:var(--text);
+    font-family:system-ui, Segoe UI, Roboto, Arial, sans-serif; line-height:1.5;
+  }
+  a{ color:var(--accent); text-decoration:none; }
+  a:hover{ text-decoration:underline; }
+  header, nav, main{ padding:1rem; max-width:960px; margin:auto; }
+  header h1{ margin:0; font-size:1.75rem; }
+  
