@@ -101,16 +101,24 @@ a:hover { text-decoration: underline; }
 
 /* Tighten heading/lede spacing in content */
 #content h1 { margin: 0 0 .5rem; }
-#content .lede { margin: 0 0 1rem; }
+#content .lede { margin: 0 0 .75rem; }   /* was 1rem */
+#content { gap: .9rem; }                 /* was 1.25rem */
 
-/* Lesson nav + generic button */
-.lesson-nav { display: flex; justify-content: flex-end; gap: .5rem; margin-top: 1rem; }
-.lesson-nav .prev, .lesson-nav .next, .btn {
-  display: inline-flex; align-items: center; gap: .5rem;
-  background: var(--accent); color: #fff; padding: .6rem .9rem;
-  border-radius: .6rem; text-decoration: none; font-weight: 600;
+
+/* Lesson nav + small button */
+.lesson-nav { display: flex; justify-content: flex-end; margin-top: .5rem; gap: .5rem; }
+.lesson-nav a {
+  display: inline-block;
+  padding: 6px 10px;           /* smaller */
+  font-size: .95rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  text-decoration: none;
 }
-.lesson-nav .prev:hover, .lesson-nav .next:hover, .btn:hover { filter: brightness(0.95); text-decoration: none; }
+.lesson-nav a:hover { background: var(--link-hover-bg); text-decoration: none; }
+
 .lesson-nav .arrow { font-weight: 700; }
 
 /* Right sidebar callout */
