@@ -163,3 +163,40 @@ body.unit-index #sidebar-right .btn {
   font-size: .92rem;
   border-radius: 8px;
 }
+
+/* ========= Lesson pages (scoped) ========= */
+body.lesson-page #content {
+  padding: 1rem 1.5rem 2rem;
+  gap: .85rem;
+}
+
+/* Small previous/next buttons: prev left, next right */
+body.lesson-page .lesson-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: .75rem;
+}
+body.lesson-page .lesson-nav a {
+  display: inline-block;
+  padding: 6px 10px;          /* small */
+  font-size: .92rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  text-decoration: none;
+  line-height: 1.1;
+}
+body.lesson-page .lesson-nav a:hover {
+  background: var(--link-hover-bg);
+  text-decoration: none;
+}
+
+/* Sidebar alias: let .navlist render like .menu-list (no HTML changes needed) */
+body.lesson-page .navlist { list-style: none; margin: 0; padding: 0; }
+body.lesson-page .navlist li { margin: 0; }
+body.lesson-page .navlist a {
+  display: block; padding: 8px 10px; border-radius: 8px; color: var(--ink);
+}
+body.lesson-page .navlist a:hover { background: var(--link-hover-bg); text-decoration: none; }
+body.lesson-page .navlist a.active { background: #eaf2ff; font-weight: 600; }
