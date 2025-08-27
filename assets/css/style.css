@@ -98,3 +98,21 @@ a:hover { text-decoration: underline; }
   .unit-shell, .unit-shell.layout-3 { grid-template-columns: 1fr; }
   #sidebar, #sidebar-right { position: static; height: auto; border: 0; }
 }
+
+/* Tighten heading/lede spacing in content */
+#content h1 { margin: 0 0 .5rem; }
+#content .lede { margin: 0 0 1rem; }
+
+/* Lesson nav + generic button */
+.lesson-nav { display: flex; justify-content: flex-end; gap: .5rem; margin-top: 1rem; }
+.lesson-nav .prev, .lesson-nav .next, .btn {
+  display: inline-flex; align-items: center; gap: .5rem;
+  background: var(--accent); color: #fff; padding: .6rem .9rem;
+  border-radius: .6rem; text-decoration: none; font-weight: 600;
+}
+.lesson-nav .prev:hover, .lesson-nav .next:hover, .btn:hover { filter: brightness(0.95); text-decoration: none; }
+.lesson-nav .arrow { font-weight: 700; }
+
+/* Right sidebar callout */
+.right-cta { position: sticky; top: 0; align-self: start; }
+.right-cta .card a { display: block; text-align: center; }

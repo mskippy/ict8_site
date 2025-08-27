@@ -7,71 +7,91 @@
   <!-- Path is from /units/u1_essential_skills/index.html to /assets/css/style.css -->
   <link rel="stylesheet" href="../../assets/css/style.css" />
 </head>
-<body>
-  <a class="skip" href="#content">Skip to content</a>
 
-  <div class="unit-shell">
-    <!-- Left sidebar -->
+<body>
+  <!-- 3-column shell: left nav | main content | right CTA -->
+  <div class="unit-shell layout-3">
+    <!-- LEFT SIDEBAR: unit navigation -->
     <aside id="sidebar" aria-label="Unit navigation">
-      <h2 class="unit-title">Unit 1: Essential Skills</h2>
-      <p class="unit-sub">Foundations for success in ICT 8</p>
-      <nav>
-        <ul class="navlist"><!-- ← no dot here -->
-          <li><a href="../../index.html">🏠 Course Home</a></li>
-          <li><a class="active" href="./index.html">Unit Overview</a></li>
-          <!-- Lessons (no /lessons folder in your tree, so link directly) -->
-          <li><a href="./Lesson 1.1.html">1.1 — Welcome to ICT 8</a></li>
-          <li><a href="./Lesson 1.2.html">1.2 — File &amp; Folder Basics</a></li>
-          <li><a href="./Lesson 1.3.html">1.3 — Renaming &amp; Moving Files</a></li>
-          <li><a href="./Lesson 1.4.html">1.4 — Downloading &amp; Unzipping</a></li>
-          <li><a href="./Lesson 1.5.html">1.5 — Uploading to OneDrive</a></li>
-          <li><a href="./Lesson 1.6.html">1.6 — Digital Habits Check</a></li>
+      <nav class="menu">
+        <h2 class="menu-title">Unit 1</h2>
+        <ul class="menu-list">
+          <li><a href="./Lesson 1.1.html">1.1 Welcome to ICT 8!</a></li>
+          <li><a href="./Lesson 1.2.html">1.2 Typing + File Management</a></li>
+          <li><a href="./Lesson 1.3.html">1.3 Parts of a Computer</a></li>
         </ul>
       </nav>
+      <div class="menu-section">
+        <h3 class="menu-subtitle">Resources</h3>
+        <ul class="menu-list">
+          <li><a href="#">Typing Program Link</a></li>
+          <li><a href="#">Digital Citizenship Agreement</a></li>
+        </ul>
+      </div>
     </aside>
 
-    <!-- Main content -->
+    <!-- MAIN CONTENT -->
     <main id="content">
-      <h1>Unit 1 Overview</h1>
-
+      <h1>Unit 1: Essential Skills &amp; Digital Literacy</h1>
       <p class="lede">
-        <strong>Welcome to Unit 1!</strong>
-        In this unit, you’ll build essential digital skills: setting up your workspace,
-        organizing files and folders, and practicing responsible habits (like saving
-        properly and keeping things tidy). By the end, you’ll feel confident navigating
-        your computer and managing your work efficiently.
+        Three short lessons to set the foundation for ICT 8: expectations &amp; routines,
+        file management, and core hardware concepts.
       </p>
 
-      <div class="two-col">
-        <section class="card" aria-labelledby="objectives">
-          <h3 id="objectives">Unit Objectives</h3>
-          <ul>
-            <li>Navigate the file system on your computer.</li>
-            <li>Create, organize, rename, and move files and folders.</li>
-            <li>Download, unzip, and upload files correctly.</li>
-            <li>Adopt effective digital habits for saving and backing up work.</li>
-          </ul>
-        </section>
+      <!-- Day cards / outline -->
+      <section class="card">
+        <h2>Day 1: Welcome to ICT 8!</h2>
+        <ul>
+          <li>Class expectations &amp; routines</li>
+          <li>Digital Citizenship Agreement (phones, AI use, class norms)</li>
+          <li>Fun activity: <em>Origami crane</em> → following instructions online</li>
+          <li>Task: Write a short professional email to your teacher</li>
+        </ul>
+        <p><a class="btn" href="./Lesson 1.1.html">Open Lesson 1.1 →</a></p>
+      </section>
 
-        <section class="card" aria-labelledby="goals">
-          <h3 id="goals">Learning Goals (Student-Friendly)</h3>
-          <ul>
-            <li>I can find, open, and organize my files and folders.</li>
-            <li>I can save work to the correct place and name files clearly.</li>
-            <li>I can download resources, unzip them, and upload my work.</li>
-            <li>I can keep my workspace organized so I don’t lose marks (or time!).</li>
-          </ul>
-        </section>
-      </div>
+      <section class="card">
+        <h2>Day 2: Typing + File Management (Make it Fun)</h2>
+        <ul>
+          <li>Typing program setup &amp; practice (1-minute speed test now &amp; end of unit)</li>
+          <li><strong>File Management Scavenger Hunt</strong> (folders, saving, moving, renaming)</li>
+          <li>Reflection: why file names &amp; structure matter</li>
+        </ul>
+        <p><a class="btn" href="./Lesson 1.2.html">Open Lesson 1.2 →</a></p>
+      </section>
 
-      <!-- Bottom nav: right aligned -->
+      <section class="card">
+        <h2>Day 3: Parts of a Computer (Interactive)</h2>
+        <ul>
+          <li><strong>Mystery Box Challenge</strong> (real parts or images → guess the function)</li>
+          <li>“Build a Computer” drag-and-drop game (Canva/Kahoot/Quizizz)</li>
+          <li>AI twist: explain a part in kid-friendly language &amp; compare answers</li>
+        </ul>
+        <p><a class="btn" href="./Lesson 1.3.html">Open Lesson 1.3 →</a></p>
+      </section>
+
+      <!-- Bottom-right next button (redundant but handy) -->
       <div class="lesson-nav">
-        <a class="next" href="./Lesson 1.1.html" aria-label="Go to 1.1 - Intro to ICT 8">
+        <a class="next" href="./Lesson 1.1.html" aria-label="Go to Lesson 1.1">
           <span>Lesson 1.1</span><span class="arrow">→</span>
         </a>
       </div>
     </main>
+
+    <!-- RIGHT SIDEBAR: sticky call-to-action -->
+    <aside id="sidebar-right" class="right-cta" aria-label="Quick actions">
+      <div class="card">
+        <h3 style="margin-top:0;">Start the Unit</h3>
+        <a class="btn" href="./Lesson 1.1.html">Go to Lesson 1.1 →</a>
+        <p class="small" style="margin:.75rem 0 0;">Jump straight into Day 1.</p>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0;">Need this later?</h3>
+        <p class="small">Bookmark this page: it lists every lesson and resource for Unit 1.</p>
+      </div>
+    </aside>
   </div>
+
 
   <script src="assets/js/main.js"></script>
 </body>
