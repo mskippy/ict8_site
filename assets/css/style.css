@@ -132,3 +132,6 @@ a:hover { text-decoration: underline; }
   .unit-shell, .unit-shell.layout-3 { grid-template-columns: 1fr; }
   #sidebar, #sidebar-right { position: static; height: auto; border: 0; }
 }
+
+/* Page naviation at the bottom of the page */
+.lesson-pager { display:flex; justify-content:space-between; align-items:center; gap:1rem; }
