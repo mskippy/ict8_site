@@ -1,124 +1,161 @@
-/* === ICT8 stylesheet ===================================================== */
+/* === ICT 8 — Base Styles ================================================= */
+
 /* Theme tokens */
-:root {
-  --maxw: 980px;
+:root{
+  --maxw: 1180px;               /* overall page width */
   --pad: 16px;
 
   --bg: #fafafa;
   --card-bg: #fff;
-  --ink: #222;
-  --ink-2: #555;
+  --ink: #1f2937;               /* gray-800 */
+  --ink-2: #4b5563;             /* gray-600 */
   --accent: #0d6efd;
 
-  /* layout */
-  --sidebar-w: 280px;
-  --border: #e5e7eb;
-  --bg-soft: #fafafa;
+  --border: #e5e7eb;            /* gray-200 */
   --link-hover-bg: #eef6ff;
 
-  /* effects */
   --radius: 12px;
   --shadow: 0 1px 2px rgba(0,0,0,.05), 0 8px 24px rgba(0,0,0,.04);
+
+  --sidebar-w: 280px;           /* left nav width */
+  --right-w: 300px;             /* right rail width (root only) */
 }
 
-/* Base */
-* { box-sizing: border-box; }
-html, body {
-  margin: 0; padding: 0;
-  background: var(--bg); color: var(--ink);
+*{ box-sizing: border-box; }
+html, body{
+  margin:0; padding:0;
+  background: var(--bg);
+  color: var(--ink);
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  line-height: 1.5;
+  line-height:1.5;
 }
-a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; }
-.small { color: var(--ink-2); font-size: .95rem; }
+a{ color: var(--accent); text-decoration:none; }
+a:hover{ text-decoration:underline; }
 
 /* Accessibility: skip link */
-.skip {
-  position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
+.skip{
+  position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;
 }
-.skip:focus {
-  position: static; width: auto; height: auto; display: inline-block;
-  padding: 6px 10px; background: #fff; border: 1px solid var(--border); border-radius: 8px;
+.skip:focus{
+  position:static; width:auto; height:auto; display:inline-block;
+  padding:6px 10px; background:#fff; border:1px solid var(--border); border-radius:8px;
 }
 
-/* Shell layout: sidebar + content */
-.unit-shell {
+/* ====== Layout Shell ===================================================== */
+
+/* Default for ALL pages: 2 columns (Left sidebar + Content) */
+.unit-shell{
   max-width: var(--maxw);
   margin: 24px auto;
   padding: 0 var(--pad);
   display: grid;
-  grid-template-columns: minmax(220px, var(--sidebar-w)) 1fr;
+  grid-template-columns: minmax(220px, var(--sidebar-w)) minmax(0, 1fr);
   gap: 24px;
 }
 
-/* Sidebar */
-#sidebar {
-  align-self: start;
-  position: sticky; top: 12px;
+/* Root index ONLY: opt-in right rail by adding class on <body> */
+body.has-right-rail .unit-shell{
+  grid-template-columns:
+    minmax(220px, var(--sidebar-w))
+    minmax(0, 1fr)
+    minmax(260px, var(--right-w));
 }
-.unit-title { margin: 0 0 .25rem; }
-.unit-subtitle { margin: 0 0 1rem; color: var(--ink-2); font-size: .95rem; }
 
-.menu { background: transparent; }
-.menu-title { font-size: 1rem; margin: 1rem 0 .25rem; color: var(--ink-2); }
-.menu-subtitle { font-size: .95rem; margin: .75rem 0 .25rem; color: var(--ink-2); }
+/* ====== Left Sidebar ===================================================== */
 
-.menu-list { list-style: none; margin: 0; padding: 0; }
-.menu-list li { margin: 0; }
-.menu-list a {
-  display: block; padding: 8px 10px; border-radius: 8px; color: var(--ink);
+#sidebar{ align-self:start; position:sticky; top:12px; }
+.unit-title{ margin:0 0 .25rem; }
+.unit-subtitle{ margin:0 0 1rem; color:var(--ink-2); font-size:.95rem; }
+
+.menu{ background:transparent; }
+.menu-title{ font-size:1rem; margin:1rem 0 .25rem; color:var(--ink-2); }
+.menu-subtitle{ font-size:.95rem; margin:.75rem 0 .25rem; color:var(--ink-2); }
+
+.menu-list{ list-style:none; margin:0; padding:0; }
+.menu-list li{ margin:0; }
+.menu-list a{
+  display:block; padding:8px 10px; border-radius:8px; color:var(--ink);
 }
-.menu-list a:hover { background: var(--link-hover-bg); text-decoration: none; }
-.menu-list a.active { background: #eaf2ff; font-weight: 600; }
+.menu-list a:hover{ background:var(--link-hover-bg); text-decoration:none; }
+/* Bold the current page/lesson by adding .active in HTML */
+.menu-list a.active{ background:#eaf2ff; font-weight:700; }
 
-/* Content */
-#content {
-  background: transparent;
-  padding: 2rem 1.5rem 4rem;   /* default spacing for pages (less on unit index via scope) */
+/* ====== Content Area ===================================================== */
+
+#content{
+  background:transparent;
+  padding: 2rem 1.5rem 3rem;     /* comfortable by default */
   border-radius: var(--radius);
-  display: grid;
-  gap: 1.25rem;
+  display:grid;
+  gap: 1.1rem;                   /* modest vertical rhythm */
 }
-#content h1 { margin: 0 0 .75rem; }
-#content .lede { margin: 0 0 1rem; color: var(--ink-2); }
 
-/* Cards and grids */
-.card {
+#content h1{ margin:0 0 .75rem; }
+#content .lede{ margin:0 0 1rem; color:var(--ink-2); }
+
+/* Cards / sections */
+.card{
   background: var(--card-bg);
-  border: 1px solid var(--border);
+  border:1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 16px 18px;
 }
-.two-col {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
-}
-@media (max-width: 860px) {
-  .unit-shell { grid-template-columns: 1fr; }
-  #sidebar { position: static; }
-  .two-col { grid-template-columns: 1fr; }
+
+/* Simple two-column content blocks (optional) */
+.two-col{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap:24px;
 }
 
-/* Buttons (generic, small by default) */
-.btn {
-  display: inline-block;
-  padding: 8px 12px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: #fff;
-  color: var(--ink);
-  font-weight: 600;
-  text-decoration: none;
-}
-.btn:hover { background: var(--link-hover-bg); text-decoration: none; }
+/* ====== Right Sidebar (Root Index ONLY) ================================= */
 
-/* Footer (if used) */
-.site-footer {
+/* By default, no right rail is assumed anywhere. Only present/visible when
+   the page adds <body class="has-right-rail"> and includes #sidebar-right. */
+
+#sidebar-right{
+  align-self:start;
+  position:sticky;
+  top:12px;
+  display:block;
+}
+body:not(.has-right-rail) #sidebar-right{ display:none; } /* hide if not root */
+
+.right-rail .card + .card{ margin-top: 12px; }
+
+/* ====== Buttons (small by default; opt-in where desired) ================= */
+
+.btn{
+  display:inline-block;
+  padding: 8px 12px;             /* small, calm by default */
+  border:1px solid var(--border);
+  border-radius:8px;
+  background:#fff;
+  color:var(--ink);
+  font-weight:600;
+  text-decoration:none;
+  line-height:1.2;
+}
+.btn:hover{ background:var(--link-hover-bg); text-decoration:none; }
+
+/* Lesson nav wrappers can align buttons without forcing size */
+.lesson-nav{ display:flex; justify-content:flex-end; gap:.5rem; }
+
+/* ====== Footer (optional) =============================================== */
+
+.site-footer{
   max-width: var(--maxw);
   margin: 24px auto 48px;
   padding: 0 var(--pad);
   color: var(--ink-2);
+}
+
+/* ====== Responsive ======================================================= */
+
+@media (max-width: 980px){
+  .unit-shell{ grid-template-columns: 1fr; }
+  #sidebar, #sidebar-right{ position:static; }
+  #content{ padding: 1.25rem 1rem 2rem; }
+  .two-col{ grid-template-columns: 1fr; }
 }
