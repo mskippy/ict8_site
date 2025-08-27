@@ -32,7 +32,14 @@ a:hover { text-decoration: underline; }
 .site-header nav a[aria-current="page"] { font-weight: 700; }
 
 /* Cards */
-.card { background: var(--card-bg); border: 1px solid #eef2f7; border-radius: 12px; padding: 16px; }
+.card {
+  background: var(--card-bg);
+  border: 1px solid #eef2f7;
+  border-radius: 12px;
+  padding: 16px;
+  align-self: start;             /* NEW */
+}
+
 .card h1, .card h2, .card h3 { margin-top: 0; }
 
 
@@ -57,7 +64,14 @@ a:hover { text-decoration: underline; }
 #sidebar .navlist a.active { background: #e5f1ff; font-weight: 700; }
 
 /* Center content (clean section gaps) */
-#content { padding: 2rem 1.5rem 4rem; max-width: 1000px; display: grid; gap: 1.25rem; }
+#content {
+  padding: 2rem 1.5rem 4rem;
+  max-width: 1000px;
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: max-content;   /* NEW */
+}
+
 
 /* Right sidebar (sticky, gentle gaps) */
 #sidebar-right {
