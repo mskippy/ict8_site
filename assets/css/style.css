@@ -158,3 +158,48 @@ a:hover { text-decoration: underline; }
 .schedule-table tbody tr:nth-child(even) { background: #fcfdff; }
 .schedule-table .row-break td,
 .schedule-table .row-lunch td { text-align: center; font-style: italic; color: var(--ink-2); background: #f9fafb; }
+
+/* Section spacing */
+#content {              /* center column */
+  display: grid;
+  gap: 1.25rem;         /* space between sections */
+}
+
+#sidebar,               /* left sidebar */
+#sidebar-right {        /* right sidebar */
+  display: grid;
+  gap: 1rem;
+}
+
+/* Column spacing in the 3-col shell */
+.unit-shell.layout-3 {
+  gap: 16px;            /* space between left/center/right columns */
+}
+
+/* Extra breathing room inside the schedules */
+#schedule h3 { margin: 14px 0 8px; }
+.table-wrap { margin-bottom: 12px; }  /* gap between the two tables */
+
+/* Keep LEFT sidebar tight (undo the grid/gap there) */
+#sidebar { 
+  display: block;               /* override any 'display:grid' */
+}
+#sidebar > * + * { 
+  margin-top: 0.6rem;           /* small spacing between sections */
+}
+#sidebar .navlist li + li { 
+  margin-top: 0.25rem;          /* compact list items */
+}
+
+/* Keep CENTER + RIGHT spacing as-is */
+#content { 
+  display: grid;
+  gap: 1.25rem;
+}
+#sidebar-right { 
+  display: grid; 
+  gap: 1rem; 
+}
+
+/* Column spacing */
+.unit-shell.layout-3 { gap: 16px; }
