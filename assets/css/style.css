@@ -75,10 +75,18 @@ a:hover { text-decoration: underline; }
 
 /* Right sidebar (sticky, gentle gaps) */
 #sidebar-right {
-  position: sticky; top: 0; height: 100vh; overflow-y: auto;
-  padding: 1.25rem; border-left: 1px solid var(--border); background: var(--bg-soft);
-  display: grid; gap: 1rem;
+  position: sticky; top: 0;
+  max-height: 100vh;               /* was: height: 100vh */
+  overflow-y: auto;
+  padding: 1.25rem;
+  border-left: 1px solid var(--border);
+  background: var(--bg-soft);
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: max-content;     /* NEW: rows shrink to content */
+  align-content: start;            /* NEW: don't stretch to fill column */
 }
+
 
 /* Updates list */
 .updates-list { margin: 0; padding-left: 18px; }
