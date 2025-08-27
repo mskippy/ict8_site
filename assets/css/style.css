@@ -76,16 +76,21 @@ a:hover { text-decoration: underline; }
 /* Right sidebar (sticky, gentle gaps) */
 #sidebar-right {
   position: sticky; top: 0;
-  max-height: 100vh;               /* was: height: 100vh */
+  max-height: 100vh;             /* keep this (not height) */
   overflow-y: auto;
   padding: 1.25rem;
   border-left: 1px solid var(--border);
   background: var(--bg-soft);
   display: grid;
   gap: 1rem;
-  grid-auto-rows: max-content;     /* NEW: rows shrink to content */
-  align-content: start;            /* NEW: don't stretch to fill column */
+  grid-auto-rows: max-content;   /* rows shrink to content */
+  align-content: start;          /* NEW: pack rows at the top */
+  align-items: start;            /* NEW: items align to top of their tracks */
+  justify-content: start;        /* NEW: avoid any horizontal distribution */
+  justify-items: stretch;        /* NEW: cards fill the column width */
 }
+
+
 
 
 /* Updates list */
