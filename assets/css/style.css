@@ -184,20 +184,36 @@ kbd {
 /* =========================
    Details / Summary styling
    ========================= */
-   details > summary {
-    font-weight: 700;              /* always bold */
-    color: #334155;                /* slate-700 */
-    cursor: pointer;
-    list-style: none;              /* hide default marker in some browsers */
-  }
-  details > summary::-webkit-details-marker { display: none; }
-  details { margin-top: .5rem; }
-  
-  /* Optional: add a subtle hover/focus */
-  details > summary:hover,
-  details > summary:focus {
-    color: #1f2937;                /* slate-800 on hover/focus */
-  }
+    /* Collapsible summary caret (flex + inline caret) */
+    details > summary {
+      display: flex;
+      align-items: center;          /* vertical centering */
+      gap: .5rem;                   /* space between caret and text */
+      font-weight: 700;
+      color: #334155;               /* slate-700 */
+      cursor: pointer;
+      list-style: none;
+    }
+    details > summary::-webkit-details-marker { display: none; }
+
+    details > summary::before {
+      content: "▸";                 /* right-pointing triangle */
+      display: inline-block;
+      font-size: 1.25em;            /* ← make it bigger here */
+      line-height: 1;
+      color: #64748b;               /* slate-500 */
+      transition: transform 160ms ease, color 160ms ease;
+    }
+
+    details[open] > summary::before {
+      transform: rotate(90deg);     /* ▸ → ▾ when open */
+    }
+
+    details > summary:hover::before,
+    details > summary:focus::before {
+      color: #475569;               /* a bit darker on hover/focus */
+    }
+
   
   /* =========================
      Global line spacing
