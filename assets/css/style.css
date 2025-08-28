@@ -135,3 +135,48 @@ a:hover { text-decoration: underline; }
 
 /* Page naviation at the bottom of the page */
 .lesson-pager { display:flex; justify-content:space-between; align-items:center; gap:1rem; }
+
+/* =========================
+   Inline Code & Keyboard Keys
+   (Lesson pages)
+   ========================= */
+
+/* Inline code (not inside <pre>) */
+code:not(pre code) {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  background: #f3f4f6;         /* light grey */
+  color: #111827;              /* near-black text */
+  border: 1px solid #e5e7eb;   /* subtle border */
+  padding: .15rem .40rem;
+  border-radius: .40rem;
+  font-size: 1rem;             /* slightly larger than body copy */
+  line-height: 1.2;
+  white-space: nowrap;         /* keeps paths/filenames on one line */
+}
+
+/* Optional: a “highlight” utility when you want it even bigger */
+code.hl {
+  background: #eef2f7;         /* a touch lighter */
+  font-size: 1.1rem;
+}
+
+/* Code shown inside preformatted blocks keeps your normal look */
+pre code {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  font-size: .95rem;
+}
+
+/* Keyboard keys (e.g., Win+Shift+S) */
+kbd {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  background: #f3f4f6;
+  color: #111827;
+  border: 1px solid #e5e7eb;
+  border-bottom-width: 2px;    /* slight “keycap” effect */
+  border-radius: .40rem;
+  padding: .10rem .35rem;
+  font-size: .95rem;
+  white-space: nowrap;
+}
