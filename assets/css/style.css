@@ -180,3 +180,45 @@ kbd {
   font-size: .95rem;
   white-space: nowrap;
 }
+
+/* =========================
+   Details / Summary styling
+   ========================= */
+   details > summary {
+    font-weight: 700;              /* always bold */
+    color: #334155;                /* slate-700 */
+    cursor: pointer;
+    list-style: none;              /* hide default marker in some browsers */
+  }
+  details > summary::-webkit-details-marker { display: none; }
+  details { margin-top: .5rem; }
+  
+  /* Optional: add a subtle hover/focus */
+  details > summary:hover,
+  details > summary:focus {
+    color: #1f2937;                /* slate-800 on hover/focus */
+  }
+  
+  /* =========================
+     Global line spacing
+     ========================= */
+  /* SAFEST: set base line-height on body and let elements inherit */
+  html { scroll-behavior: smooth; } /* non-essential: keeps your anchors nice */
+  body {
+    line-height: 1.7;              /* increase overall readability */
+  }
+  
+  /* Ensure common text blocks inherit the roomy spacing */
+  .card p,
+  .card li,
+  .card dt,
+  .card dd {
+    line-height: 1.7;
+  }
+  
+  /* If headings look too airy, keep them a bit tighter */
+  h1, h2, h3, h4, h5, h6 { line-height: 1.25; }
+  
+  /* Optional: add a little extra breathing room between list items */
+  .card li + li { margin-top: .15rem; }
+  
