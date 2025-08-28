@@ -189,7 +189,7 @@ kbd {
       display: flex;
       align-items: center;          /* vertical centering */
       gap: .5rem;                   /* space between caret and text */
-      font-weight: 700;
+      font-weight: normal;
       color: #334155;               /* slate-700 */
       cursor: pointer;
       list-style: none;
