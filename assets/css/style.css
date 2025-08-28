@@ -233,7 +233,7 @@ details > summary::before {
   position: absolute;
   left: 0;
   top: 0.15rem;                        /* nudge to align with text */
-  font-size: 0.95em;
+  font-size: 1.25em;
   line-height: 1;
   color: #64748b;                      /* slate-500 */
   transition: transform 160ms ease;
