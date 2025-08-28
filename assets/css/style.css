@@ -221,4 +221,36 @@ kbd {
   
   /* Optional: add a little extra breathing room between list items */
   .card li + li { margin-top: .15rem; }
-  
+
+  /* ▼ Collapsible summary caret */
+details > summary {
+  position: relative;
+  padding-left: 1.25rem;              /* room for the caret */
+}
+
+details > summary::before {
+  content: "▸";                        /* right-pointing triangle */
+  position: absolute;
+  left: 0;
+  top: 0.15rem;                        /* nudge to align with text */
+  font-size: 0.95em;
+  line-height: 1;
+  color: #64748b;                      /* slate-500 */
+  transition: transform 160ms ease;
+}
+
+/* When open, point down */
+details[open] > summary::before {
+  transform: rotate(90deg);            /* ▸ → ▾ */
+}
+
+/* (optional) darker on hover/focus for affordance */
+details > summary:hover::before,
+details > summary:focus::before {
+  color: #475569;                      /* slate-600 */
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  details > summary::before { transition: none; }
+}
